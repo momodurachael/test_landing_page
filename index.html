@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css Grids</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+
+      * {
+        margin: 0px;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* height: 100vh; */
+        /* width: 100vw; */
+      }
+      
+      .wrapper {
+        display: grid;
+        /* grid-template-columns:1fr 2fr 1fr; */
+        /* grid-template-columns: repeat(2, 2fr); */
+        /* grid-gap: 1em; */
+        /* grid-auto-rows:100px; */
+        grid-auto-rows: minmax(100px, auto);
+        height: 90vh;
+        margin-top: 20px;
+        padding: 20px;
+        grid-template-rows: auto auto;
+      }
+
+      .wrapper {
+        display: grid;
+        grid-template-columns: 50% 47%;
+        grid-column-gap: 1em;
+        grid-row-gap: 1em;
+        grid-gap: 1em;
+        background: #eee;
+        border-radius: 20px;
+        width: 600px;
+      }
+
+      /* .nested {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 70%;
+        grid-gap: 1em;
+      } */
+
+      .wrapper > div {
+        /* background: #eee; */
+        padding: 30px;
+        border-radius: 15px;
+      }
+
+
+      .box_A {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .top_A {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+      }
+
+      .top_A i {
+        margin-right: 4%;
+      }
+
+      .top_A h2 {
+        padding-right: 5%;
+        font-size: 117%;
+      }
+
+      .buttom {
+        display: flex;
+        flex-direction: row;
+      }
+      .buttom_A {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+      }
+
+      .buttom_A i {
+        margin-right: 15%;
+        margin-left: 20%;
+      }
+
+      .box_B {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .top_B {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: end;
+      }
+
+      .top_B img {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+      }
+
+      .buttom_B i {
+        display: flex;
+        justify-content: end;
+      }
+
+      .button_F {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 20px;
+      }
+
+      .button_F p {
+        color: #eee;
+      }
+
+      .button_F i {
+        color: #eee;
+      }
+
+      .box_F {
+        display: flex;
+        justify-content: end;
+        position: relative;
+      }
+
+      .buttom_E {
+        margin-top: 20px;
+        padding-left: 4px;
+      }
+
+      .buttom_E i {
+        padding-right: 10px;
+      }
+
+      .box_E {
+        background: white;
+        height: 70px !important;
+      }
+      .box_E input {
+        width: 80%;
+        /* height: 25px; */
+        border: none;
+        outline: none;
+      }
+
+      .box_G {
+        position: relative;
+      }
+
+      .box_G h1 {
+        font-size: 20px;
+        position: absolute;
+        top: 0%;
+        left: 20px;
+      }
+
+      .chat_box {
+        position: relative;
+        padding: 14px !important;
+        background-color: white;
+      }
+
+      .chat_box h2, h1 {
+        font-size: 17px;
+      }
+
+      .box_C {
+        background: transparent;
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="box_A">
+          <div class="top_A">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <h2>conference meeting</h2>
+            <div><h3>4h left</h3></div>
+          </div>
+          <div class="buttom_A">
+            <div>
+              <h1>6:00</h1>
+              <p>sat, dec 11</p>
+            </div>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <div>
+              <h1>7:00</h1>
+              <p>sat, dec 11</p>
+            </div>
+          </div>
+        </div>
+        <div class="box_B">
+          <div class="top_B">
+            <img
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="pic1"
+            />
+            <img
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="pic1"
+            />
+            <img
+              src="http://images.amcnetworks.com/amc.com/wp-content/uploads/2016/11/23214_HUMANS_S2_Mia_Is_A_Synthetic_10-800x450.jpg"
+              alt="pic1"
+            />
+            <div><h3>+ 8</h3></div>
+          </div>
+          <div class="buttom_B">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class=""></div>
+        <div class="chat_box">hmmm...let me think</div>
+        <div class="chat_box">
+          where do we want to meet guys? i relly need to know pls before 
+          soeme more text to check stuff dsjjdndjndjsncsjcvdskbcsdk
+          soeme more text to check stuff dsjjdndjndjsncsjcvdskbcsdk
+          soeme more text to check stuff dsjjdndjndjsncsjcvdskbcsdk
+        </div>
+        <div class=""></div>
+        <div class="box_E">
+          <input
+            placeholder="Message to Conference Message"
+            type="text"
+            id="message"
+            name="message"
+          />
+          <div class="buttom_E">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            <i class="fa fa-smile-o" aria-hidden="true"></i>
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="box_F">
+          <button class="button_F">
+            <p>send now |</p>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
